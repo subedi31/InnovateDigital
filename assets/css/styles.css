@@ -23,10 +23,10 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: #008080; /* Teal */
+  background: #008080;
   color: #fff;
   padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .nav-links li a {
-  color: #e0f2f1; /* Light teal */
+  color: #e0f2f1;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -93,9 +93,66 @@ body {
   width: 100%;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 4px;
+  top: 110%;
+  left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.dropdown-content li:hover {
+  background-color: #f0f0f0;
+}
+
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0,128,128,0.8), rgba(0,128,128,0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 128, 128, 0.8), rgba(0, 128, 128, 0.6)), url('../images/hero-bg.jpg') center/cover no-repeat;
   color: #fff;
   height: 70vh;
   display: flex;
@@ -114,13 +171,13 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary {
@@ -133,12 +190,12 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,121,107,0.4);
+  box-shadow: 0 4px 8px rgba(0, 121, 107, 0.4);
 }
 
 .btn-primary:hover {
   background-color: #004d40;
-  box-shadow: 0 6px 12px rgba(0,77,64,0.6);
+  box-shadow: 0 6px 12px rgba(0, 77, 64, 0.6);
 }
 
 /* Services Preview */
@@ -168,13 +225,13 @@ body {
   flex: 1 1 250px;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .service-item h3 {
@@ -191,7 +248,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: #444; /* slightly lighter dark gray */
+  background-color: #444;
   color: #ccc;
   padding: 1rem 0;
   text-align: center;
@@ -223,7 +280,6 @@ footer {
   color: #e0f2f1;
 }
 
-/* Social media SVG icons size */
 .social-links svg {
   width: 24px;
   height: 24px;
@@ -231,18 +287,28 @@ footer {
   vertical-align: middle;
 }
 
-/* Animations */
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .services-list {
     flex-direction: column;
@@ -262,14 +328,13 @@ footer {
   }
 }
 
-/* Contact form styling (for contact.html) */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
   background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
